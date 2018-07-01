@@ -1,0 +1,25 @@
+{
+  "name": "xwchris.github.io",
+  "version": "1.0.0",
+  "description": "css trick",
+  "main": "index.js",
+  "dependencies": {
+    "sass": "^1.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "node app.js",
+    "clean": "rm -rf dist; rm index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xwchris/xwchris.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xwchris/xwchris.github.io/issues"
+  },
+  "homepage": "https://github.com/xwchris/xwchris.github.io#readme"
+}

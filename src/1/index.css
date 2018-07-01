@@ -1,0 +1,27 @@
+.content-1 button {
+  padding: .3em .8em;
+  border: 1px solid rgba(0, 0, 0, .1);
+  background: #58a linear-gradient(hsla(0, 0%, 100%, .2), transparent);
+  border-radius: .2em;
+  box-shadow: 0 .05em .25em rgba(0, 0, 0, .5);
+  color: white;
+  text-shadow: 0 -.05em .05em rgba(0, 0, 0, .5);
+  font-size: 125%;
+  line-height: 1.5;
+  vertical-align: middle;
+}
+
+.content-1 button.cancel {
+  background-color: #c00;
+}
+
+.content-1 button.ok {
+  background-color: #6b0;
+}
+
+.content-1 .button-list:before {
+  display: inline-block;
+  height: 100%;
+  width: 0;
+  vertical-align: middle;
+}
