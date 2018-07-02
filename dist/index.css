@@ -26,7 +26,6 @@ html, body {
   display: inline-block;
   position: relative;
   box-sizing: border-box;
-  padding: 2em 80px;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -34,8 +33,7 @@ html, body {
 }
 
 .container > .title {
-  margin-top: 0;
-  margin-bottom: 1.5em;
+  margin-top: 2em;
   font-size: 2em;
   line-height: 1.5;
   color: #fff;
@@ -43,24 +41,22 @@ html, body {
 }
 
 .container .content {
-  display: inline-block;
-  width: 100%;
+  position: absolute;
+  left: 12em;
+  right: 12em;
+  top: 4em;
+  bottom: 4em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   white-space: normal;
-  vertical-align: middle;
-}
-
-.middle-helper {
-  display: inline-block;
-  height: calc(100% - 10.5em);
-  vertical-align: middle;
 }
 
 .btn-prev, .btn-next {
   position: absolute;
   top: 50%;
-  transform: translateY(10px);
-  width: 20px;
-  height: 20px;
+  width: 2em;
+  height: 2em;
   cursor: pointer;
   transition: border-color .3s ease;
   z-index: 1;
@@ -71,17 +67,17 @@ html, body {
 }
 
 .btn-prev {
-  left: 40px;
-  border-left: 4px solid #fff;
-  border-bottom: 4px solid #fff;
-  transform: rotate(45deg);
+  left: 4em;
+  border-left: .5em solid #fff;
+  border-bottom: .5em solid #fff;
+  transform: translateY(-1em) rotate(45deg);
 }
 
 .btn-next {
-  right: 40px;
-  border-right: 4px solid #fff;
-  border-bottom: 4px solid #fff;
-  transform: rotate(-45deg);
+  right: 4em;
+  border-right: .5em solid #fff;
+  border-bottom: .5em solid #fff;
+  transform: translateY(-1em) rotate(-45deg) ;
 }
 
 .justify {
@@ -115,10 +111,137 @@ html, body {
 .content-1 button.ok {
   background-color: #6b0;
 }
+.content-2 .box {
+  font-size: 10px;
+  margin: 0 auto;
+  width: 20em;
+  height: 20em;
+  background-clip: padding-box;
+  background-color: white;
+  border: 2em solid hsla(0, 0%, 100%, .5);
+}
+.content-3 .box {
+  font-size: 10px;
+  background-color: yellowgreen;
+}
 
-.content-1 .button-list:before {
-  display: inline-block;
-  height: 100%;
-  width: 0;
-  vertical-align: middle;
+.content-3 .multi-border-shadow {
+  width: 9em;
+  height: 9em;
+  padding: 3em;
+  box-shadow:
+    inset 0 0 0 1em #655,
+    inset 0 0 0 2em deeppink,
+    inset 0 0 0 3em blue;
+}
+
+.content-3 .multi-border-outline {
+  width: 11em;
+  height: 11em;
+  border: 1em solid blue;
+  outline: 1em solid deeppink;
+}
+
+.content-3 .border-outline-inset {
+  width: 15em;
+  height: 15em;
+  background-color: #333;
+  outline: 1px dashed #fff;
+  outline-offset: -2em;
+  border-radius: 1em;
+}
+.content-4 .box {
+  font-size: 10px;
+  width: 13em;
+  height: 13em;
+  outline: 1em solid #655;
+  background-color: tan;
+  border-radius: 1em;
+  box-shadow: 0 0 0 .5em #655;
+}
+.content-5 .box {
+  font-size: 10px;
+  width: 15em;
+  height: 15em;
+}
+
+.content-5 .horizontal-stripe {
+  background: #58a linear-gradient(transparent 50%, hsla(0, 0%, 100%, .1) 0);
+  background-size: 100% 2em;
+}
+
+.content-5 .gradient-stripe {
+  background: #58a repeating-linear-gradient(30deg, hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1) 1em, transparent 0, transparent 2em);
+}
+.content-6 .box {
+  font-size: 10px;
+  width: 16em;
+  height: 16em;
+}
+
+.content-6 .box.ploka {
+  background-color: #eee;
+  background-image:
+    radial-gradient(rgba(0, 0, 0, .25) 30%, transparent 0),
+    radial-gradient(rgba(0, 0, 0, .25) 30%, transparent 0);
+  background-size: 2em 2em;
+  background-position: 0 0, 1em 1em;
+}
+
+.content-6 .box.checkerboard {
+  background-color: #eee;
+  background-image:
+    linear-gradient(45deg, rgba(0, 0, 0, .25) 25%, transparent 0, transparent 75%, rgba(0, 0, 0, .25) 0),
+    linear-gradient(45deg, rgba(0, 0, 0, .25) 25%, transparent 0, transparent 75%, rgba(0, 0, 0, .25) 0);
+  background-size: 2em 2em;
+  background-position: 0 0, 1em 1em;
+}
+
+.content-6 .box.checkerboard-svg {
+  background: #eee url('data:image/svg+xml, \
+    <svg xmlns="http://www.w3.org/2000/svg" \
+      width="100" height="100" \
+      fill-opacity=".25"> \
+    <rect x="50" width="50" height="50" /> \
+    <rect y="50" width="50" height="50" /> \
+    </svg>');
+  background-size: 2em 2em;
+}
+.content-7 .box {
+  font-size: 10px;
+  width: 30em;
+  height: 15em;
+  background-color: hsl(20, 40%, 90%);
+  background-image:
+    linear-gradient(90deg, #fb3 11px, transparent 0),
+    linear-gradient(90deg, #ab4 23px, transparent 0),
+    linear-gradient(90deg, #655 41px, transparent 0);
+  background-size: 41px 100%, 61px 100%, 83px 100%;
+}
+.content-8 .box {
+  font-size: 10px;
+  width: 18em;
+  height: 13em;
+}
+
+.content-8 .box.stripe-border {
+  border: 1em solid transparent;
+  background:
+    linear-gradient(white, white) padding-box,
+    repeating-linear-gradient(-45deg, red 0, red 12.5%, transparent 0, transparent 25%, #58a 0, #58a 37.5%, transparent 0, transparent 50%) 0 / 5em 5em;
+}
+
+@keyframes ants {
+  to {
+    background-position: 100%;
+  }
+}
+
+.content-8 .box.arts-marching {
+  height: 15em;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(white, white) padding-box,
+    repeating-linear-gradient(-45deg, black 0, black 25%, white 0, white 50%) 0 / .6em .6em;
+    animation: ants 12s linear infinite;
 }

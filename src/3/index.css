@@ -1,0 +1,30 @@
+.content-3 .box {
+  font-size: 10px;
+  background-color: yellowgreen;
+}
+
+.content-3 .multi-border-shadow {
+  width: 9em;
+  height: 9em;
+  padding: 3em;
+  box-shadow:
+    inset 0 0 0 1em #655,
+    inset 0 0 0 2em deeppink,
+    inset 0 0 0 3em blue;
+}
+
+.content-3 .multi-border-outline {
+  width: 11em;
+  height: 11em;
+  border: 1em solid blue;
+  outline: 1em solid deeppink;
+}
+
+.content-3 .border-outline-inset {
+  width: 15em;
+  height: 15em;
+  background-color: #333;
+  outline: 1px dashed #fff;
+  outline-offset: -2em;
+  border-radius: 1em;
+}

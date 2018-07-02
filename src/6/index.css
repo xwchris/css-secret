@@ -1,0 +1,34 @@
+.content-6 .box {
+  font-size: 10px;
+  width: 16em;
+  height: 16em;
+}
+
+.content-6 .box.ploka {
+  background-color: #eee;
+  background-image:
+    radial-gradient(rgba(0, 0, 0, .25) 30%, transparent 0),
+    radial-gradient(rgba(0, 0, 0, .25) 30%, transparent 0);
+  background-size: 2em 2em;
+  background-position: 0 0, 1em 1em;
+}
+
+.content-6 .box.checkerboard {
+  background-color: #eee;
+  background-image:
+    linear-gradient(45deg, rgba(0, 0, 0, .25) 25%, transparent 0, transparent 75%, rgba(0, 0, 0, .25) 0),
+    linear-gradient(45deg, rgba(0, 0, 0, .25) 25%, transparent 0, transparent 75%, rgba(0, 0, 0, .25) 0);
+  background-size: 2em 2em;
+  background-position: 0 0, 1em 1em;
+}
+
+.content-6 .box.checkerboard-svg {
+  background: #eee url('data:image/svg+xml, \
+    <svg xmlns="http://www.w3.org/2000/svg" \
+      width="100" height="100" \
+      fill-opacity=".25"> \
+    <rect x="50" width="50" height="50" /> \
+    <rect y="50" width="50" height="50" /> \
+    </svg>');
+  background-size: 2em 2em;
+}

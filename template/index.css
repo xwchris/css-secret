@@ -26,7 +26,6 @@ html, body {
   display: inline-block;
   position: relative;
   box-sizing: border-box;
-  padding: 2em 80px;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -34,8 +33,7 @@ html, body {
 }
 
 .container > .title {
-  margin-top: 0;
-  margin-bottom: 1.5em;
+  margin-top: 2em;
   font-size: 2em;
   line-height: 1.5;
   color: #fff;
@@ -43,24 +41,22 @@ html, body {
 }
 
 .container .content {
-  display: inline-block;
-  width: 100%;
+  position: absolute;
+  left: 12em;
+  right: 12em;
+  top: 4em;
+  bottom: 4em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   white-space: normal;
-  vertical-align: middle;
-}
-
-.middle-helper {
-  display: inline-block;
-  height: calc(100% - 10.5em);
-  vertical-align: middle;
 }
 
 .btn-prev, .btn-next {
   position: absolute;
   top: 50%;
-  transform: translateY(10px);
-  width: 20px;
-  height: 20px;
+  width: 2em;
+  height: 2em;
   cursor: pointer;
   transition: border-color .3s ease;
   z-index: 1;
@@ -71,17 +67,17 @@ html, body {
 }
 
 .btn-prev {
-  left: 40px;
-  border-left: 4px solid #fff;
-  border-bottom: 4px solid #fff;
-  transform: rotate(45deg);
+  left: 4em;
+  border-left: .5em solid #fff;
+  border-bottom: .5em solid #fff;
+  transform: translateY(-1em) rotate(45deg);
 }
 
 .btn-next {
-  right: 40px;
-  border-right: 4px solid #fff;
-  border-bottom: 4px solid #fff;
-  transform: rotate(-45deg);
+  right: 4em;
+  border-right: .5em solid #fff;
+  border-bottom: .5em solid #fff;
+  transform: translateY(-1em) rotate(-45deg) ;
 }
 
 .justify {

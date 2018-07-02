@@ -18,10 +18,3 @@
 .content-1 button.ok {
   background-color: #6b0;
 }
-
-.content-1 .button-list:before {
-  display: inline-block;
-  height: 100%;
-  width: 0;
-  vertical-align: middle;
-}

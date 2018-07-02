@@ -1,0 +1,14 @@
+.content-5 .box {
+  font-size: 10px;
+  width: 15em;
+  height: 15em;
+}
+
+.content-5 .horizontal-stripe {
+  background: #58a linear-gradient(transparent 50%, hsla(0, 0%, 100%, .1) 0);
+  background-size: 100% 2em;
+}
+
+.content-5 .gradient-stripe {
+  background: #58a repeating-linear-gradient(30deg, hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1) 1em, transparent 0, transparent 2em);
+}
