@@ -111,6 +111,120 @@ html, body {
 .content-1 button.ok {
   background-color: #6b0;
 }
+.content-10 .box {
+  display: inline-block;
+  font-size: 0;
+}
+
+.content-10 .box nav > a {
+  font-size: 16px;
+  position: relative;
+  display: inline-block;
+  padding: 2em 2em .5em;
+  color: #000;
+  text-decoration: none;
+}
+
+.content-10 .box nav > a:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: #ccc;
+  background-image: linear-gradient(hsla(0, 0%, 100%, .6), hsla(0, 0%, 100%, 0));
+  border: 1px solid rgba(0, 0, 0, .4);
+  border-bottom: 0;
+  border-radius: .5em .5em 0 0;
+  box-shadow: 0 .15em white inset;
+  transform: perspective(.5em) rotateX(5deg);
+  transform-origin: bottom;
+}
+
+.content-10 .box .nav-content {
+  font-size: 16px;
+  height: 10em;
+  border: 1px solid rgba(0, 0, 0, .4);
+}
+.content-11 {
+  font-size: 10px;
+}
+
+.content-11 .pie {
+  position: relative;
+  width: 15em;
+  line-height: 15em;
+  border-radius: 50%;
+  background: yellowgreen;
+  background-image: linear-gradient(90deg, transparent 50%, #655 0);
+  color: transparent;
+  text-align: center;
+}
+
+@keyframes spin {x
+  to {
+    transform: rotate(.5turn);
+  }
+}
+
+@keyframes bg {
+  50% {
+    background: #655;
+  }
+}
+
+.content-11 .pie:before {
+  position: absolute;
+  content: '';
+  left: 50%;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  border-radius: 0 100% 100% 0 / 50%;
+  transform-origin: left;
+  background-color: inherit;
+  animation:
+    spin 50s linear infinite,
+    bg 100s step-end infinite;
+  animation-play-state: paused;
+  animation-delay: inherit;
+}
+
+.content-11 .pie-svg svg {
+  width: 15em;
+  height: 15em;
+  transform: rotate(-90deg);
+  background: yellowgreen;
+  border-radius: 50%;
+}
+
+.content-11 .pie-svg circle {
+  fill: yellowgreen;
+  stroke: #655;
+  stroke-width: 32;
+}
+.content-12 .box {
+  font-size: 10px;
+  width: 13em;
+  line-height: 1.8;
+  padding: 1em;
+}
+
+.content-12 .convex-text {
+  font-size: 1.6em;
+  background-color: hsl(210, 13%, 40%);
+  color: hsl(210, 13%, 75%);
+  text-shadow: 0 -1px 1px black;
+}
+
+.content-12 .concave-text {
+  font-size: 1.6em;
+  background-color: hsl(210, 13%, 60%);
+  color: hsl(210, 13%, 30%);
+  text-shadow: 0 1px 1px hsla(0, 0%, 100%, .8);
+}
 .content-2 .box {
   font-size: 10px;
   margin: 0 auto;
@@ -244,4 +358,33 @@ html, body {
     linear-gradient(white, white) padding-box,
     repeating-linear-gradient(-45deg, black 0, black 25%, white 0, white 50%) 0 / .6em .6em;
     animation: ants 12s linear infinite;
+}
+.content-9 .box {
+  font-size: 10px;
+}
+
+.content-9 .box.radial-resection {
+  width: 15em;
+  height: 15em;
+  background-image:
+    radial-gradient(circle at top left, transparent 1em, #58a 0),
+    radial-gradient(circle at top right, transparent 1em, #58a 0),
+    radial-gradient(circle at bottom left, transparent 1em, #58a 0),
+    radial-gradient(circle at bottom right, transparent 1em, #58a 0);
+  background-size: 50% 50%;
+  background-position: top left, top right, bottom left, bottom right;
+  background-repeat: no-repeat;
+}
+
+.content .box.linear-resection-svg {
+  width: 13em;
+  height: 13em;
+  border: 1em solid transparent;
+  background-color: #58a;
+  background-clip: padding-box;
+  border-image: 1 url('data:image/svg+xml,\
+  <svg xmlns="http://www.w3.org/2000/svg"\
+    width="3" height="3" fill="%2358a">\
+  <polygon points="0,1 1,0 2,0 3,1 3,2 2,3 1,3 0,2"/> \
+  </svg>');
 }

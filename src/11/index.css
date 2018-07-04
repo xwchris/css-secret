@@ -1,0 +1,57 @@
+.content-11 {
+  font-size: 10px;
+}
+
+.content-11 .pie {
+  position: relative;
+  width: 15em;
+  line-height: 15em;
+  border-radius: 50%;
+  background: yellowgreen;
+  background-image: linear-gradient(90deg, transparent 50%, #655 0);
+  color: transparent;
+  text-align: center;
+}
+
+@keyframes spin {x
+  to {
+    transform: rotate(.5turn);
+  }
+}
+
+@keyframes bg {
+  50% {
+    background: #655;
+  }
+}
+
+.content-11 .pie:before {
+  position: absolute;
+  content: '';
+  left: 50%;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  border-radius: 0 100% 100% 0 / 50%;
+  transform-origin: left;
+  background-color: inherit;
+  animation:
+    spin 50s linear infinite,
+    bg 100s step-end infinite;
+  animation-play-state: paused;
+  animation-delay: inherit;
+}
+
+.content-11 .pie-svg svg {
+  width: 15em;
+  height: 15em;
+  transform: rotate(-90deg);
+  background: yellowgreen;
+  border-radius: 50%;
+}
+
+.content-11 .pie-svg circle {
+  fill: yellowgreen;
+  stroke: #655;
+  stroke-width: 32;
+}

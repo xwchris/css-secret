@@ -4,6 +4,57 @@
   <button class="cancel">click me</button>
   <button class="ok">click me</button>
 </div>
+        </li>              <li class="container">          <h1 class="title">梯形效果</h1>          <!-- title: 梯形效果 -->
+<div class="content content-10">
+  <div class="box">
+    <nav>
+      <a href="">home</a>
+      <a href="">projects</a>
+      <a href="">about</a>
+    </nav>
+    <div class="nav-content"></div>
+  </div>
+</div>
+        </li>              <li class="container">          <h1 class="title">饼图效果</h1>          <!-- title: 饼图效果 -->
+<div class="content content-11">
+  <div class="pie">40</div>
+  <div class="pie">60</div>
+  <div class="pie-svg">85</div>
+</div>
+<script>
+  [].slice.call(document.querySelectorAll('.pie')).forEach(function ($pie) {
+    var p = parseFloat($pie.textContent);
+    $pie.style.animationDelay = '-' + p + 's';
+  });
+
+  // svg-pie
+  [].slice.call(document.querySelectorAll('.pie-svg')).forEach(function ($pie) {
+    var p = parseFloat($pie.textContent);
+    var NS = "http://www.w3.org/2000/svg";
+    var svg = document.createElementNS(NS, "svg");
+    var circle = document.createElementNS(NS, 'circle');
+    var title = document.createElementNS(NS, 'title');
+    circle.setAttribute('r', 16);
+    circle.setAttribute('cx', 16);
+    circle.setAttribute('cy', 16);
+    circle.setAttribute('stroke-dasharray', p + " 100");
+    svg.setAttribute("viewBox", "0 0 32 32");
+    title.textContent = $pie.textContent;
+    $pie.textContent = '';
+    svg.appendChild(title);
+    svg.appendChild(circle);
+    $pie.appendChild(svg);
+  })
+</script>
+        </li>              <li class="container">          <h1 class="title">凹凸文字效果</h1>          <!-- title: 凹凸文字效果 -->
+<div class="content content-12">
+  <div class="box convex-text">
+    The only way to get rid of a temptation is to yield to it
+  </div>
+  <div class="box concave-text">
+    The only way to get rid of a temptation is to yield to it
+  </div>
+</div>
         </li>              <li class="container">          <h1 class="title">半透明边框</h1>          <!-- title: 半透明边框 -->
 <div class="content content-2">
   <div class="box"></div>
@@ -37,5 +88,10 @@
 <div class="content content-8">
   <div class="box stripe-border"></div>
   <div class="box arts-marching"></div>
+</div>
+        </li>              <li class="container">          <h1 class="title">切角效果</h1>          <!-- title: 切角效果 -->
+<div class="content content-9">
+  <div class="box radial-resection"></div>
+  <div class="box linear-resection-svg"></div>
 </div>
         </li>          </ul>    <div class="btn-next"></div>  </div>  <script src="./dist/index.js"></script></body></html>
